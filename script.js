@@ -66,7 +66,7 @@ function fetchWeatherdata() {
 
       dateOutput.innerHTML = `${dayofTheWeek(d, m, y)} ${d}, ${m} ${y}`;
       timeOutput.innerHTML = time;
-      nameOutput.innerHTML = data.location.name;
+      nameOutput.innerHTML = `${data.location.name}, ${data.location.country}`;
       const iconId = data.current.condition.icon.substr(
         "//cdn.weatherapi.com/weather/64x64/".length
       );
